@@ -1,191 +1,196 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spotify Clone - Home</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="app">
-
-        <aside class="sidebar">
-    <a href="index.html" class="logo">
-        <img src="images/Spotify.png" alt="Spotify">
-    </a>
-    <!-- test// -->
-    <nav class="main-nav">
-        <a href="index.html" class="nav-link active">
-            <svg class="sidebar-icon home-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M3 10.8 12 3l9 7.8V21h-6v-7H9v7H3z"/>
+      <aside class="sidebar">
+        <a href="index.html" class="logo">
+          <img src="images/Spotify.png" alt="Spotify" />
+        </a>
+        <!-- test// -->
+        <nav class="main-nav">
+          <a href="index.html" class="nav-link active">
+            <svg
+              class="sidebar-icon home-icon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path d="M3 10.8 12 3l9 7.8V21h-6v-7H9v7H3z" />
             </svg>
             <span>Home</span>
-        </a>
+          </a>
 
-        <a href="search.html" class="nav-link ">
-            <svg class="sidebar-icon search-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <circle cx="10.8" cy="10.8" r="7.3"/>
-                <path d="m16.2 16.2 4.6 4.6"/>
+          <a href="search.html" class="nav-link">
+            <svg
+              class="sidebar-icon search-icon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <circle cx="10.8" cy="10.8" r="7.3" />
+              <path d="m16.2 16.2 4.6 4.6" />
             </svg>
             <span>Search</span>
-        </a>
+          </a>
 
-        <a href="#" class="nav-link">
-            <svg class="sidebar-icon library-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4 3v18M8 3v18M12 3v18M17 3l4 18"/>
+          <a href="#" class="nav-link">
+            <svg
+              class="sidebar-icon library-icon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path d="M4 3v18M8 3v18M12 3v18M17 3l4 18" />
             </svg>
             <span>Your Library</span>
-        </a>
-    </nav>
+          </a>
+        </nav>
 
-    <div class="library-actions">
-        <a href="#" class="nav-link">
-            <svg class="sidebar-icon create-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M3 3h18v18H3z"/>
-                <path d="M12 7v10M7 12h10" class="icon-cutout"/>
+        <div class="library-actions">
+          <a href="#" class="nav-link">
+            <svg
+              class="sidebar-icon create-icon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path d="M3 3h18v18H3z" />
+              <path d="M12 7v10M7 12h10" class="icon-cutout" />
             </svg>
             <span>Create Playlist</span>
-        </a>
+          </a>
 
-        <a href="#" class="nav-link">
-            <svg class="sidebar-icon liked-icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.5a5.5 5.5 0 0 0 0-7.8z"/>
+          <a href="#" class="nav-link">
+            <svg
+              class="sidebar-icon liked-icon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M20.8 4.7a5.5 5.5 0 0 0-7.8 0L12 5.8l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.5a5.5 5.5 0 0 0 0-7.8z"
+              />
             </svg>
             <span>Liked Songs</span>
-        </a>
-    </div>
+          </a>
+        </div>
 
-    <div class="sidebar-bottom">
-        <div class="footer-links">
+        <div class="sidebar-bottom">
+          <div class="footer-links">
             <a href="#">Legal</a>
             <a href="#">Privacy Center</a>
             <a href="#">Privacy Policy</a>
             <a href="#">Cookies</a>
             <a href="#">About</a>
             <a href="#">Ads</a>
-        </div>
+          </div>
 
-        <button class="lang-btn" type="button">
+          <button class="lang-btn" type="button">
             <svg viewBox="0 0 24 24" aria-hidden="true">
-                <circle cx="12" cy="12" r="9"/>
-                <path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>
+              <circle cx="12" cy="12" r="9" />
+              <path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18" />
             </svg>
             English
-        </button>
-    </div>
-</aside>
+          </button>
+        </div>
+      </aside>
 
-        <main class="main-content">
+      <main class="main-content">
+        <header class="topbar">
+          <div class="topbar-spacer"></div>
+          <div class="auth-buttons">
+            <a href="signup.html" class="signup">Sign up</a>
+            <a href="login.html" class="login">Log in</a>
+          </div>
+        </header>
 
-            <header class="topbar">
-                <div class="topbar-spacer"></div>
-
-                <div class="auth-buttons">
-                    <a href="#" class="signup">Sign up</a>
-                    <a href="#" class="login">Log in</a>
-                </div>
-            </header>
-
-            <div class="content-area">
-
-                <section class="music-section">
-                    <div class="section-heading">
-                        <h2>Focus</h2>
-                        <a href="#" class="show-all">Show all</a>
-                    </div>
-
-                    <div class="playlist-grid">
-
-                        <article class="playlist-card">
-                            <img src="images/Peaceful Piano.png"
-                                 alt="Peaceful Piano">
-                            <h3>Peaceful Piano</h3>
-                            <p>Peaceful piano to help you slow down, breathe, and...</p>
-                        </article>
-
-                        <article class="playlist-card">
-                            <img src="images/Deep Focus.png"
-                                 alt="Deep Focus">
-                            <h3>Deep Focus</h3>
-                            <p>Keep calm and focus with ambient and post-rock music.</p>
-                        </article>
-
-                        <article class="playlist-card">
-                            <img src="images/Instrumental Study.png"
-                                 alt="Instrumental Study">
-                            <h3>Instrumental Study</h3>
-                            <p>Focus with soft study music in the background.</p>
-                        </article>
-
-                        <article class="playlist-card">
-                            <img src="images/Focus Flow.png"
-                                 alt="Focus Flow">
-                            <h3>Focus Flow</h3>
-                            <p>Uptempo instrumental hip hop beats.</p>
-                        </article>
-
-                        <article class="playlist-card">
-                            <img src="images/Beats to think to.png"
-                                 alt="Beats to think to">
-                            <h3>Beats to think to</h3>
-                            <p>Focus with deep techno and tech house.</p>
-                        </article>
-
-                    </div>
-                </section>
-
-                <section class="music-section">
-                    <div class="section-heading">
-                        <h2>Spotify Playlists</h2>
-                        <a href="#" class="show-all">Show all</a>
-                    </div>
-
-                    <div class="playlist-grid">
-
-                        <article class="playlist-card">
-                            <img src="images/Today’s Top Hits.png"
-                                 alt="Today's Top Hits">
-                            <h3>Today's Top Hits</h3>
-                            <p>Harry Styles is on top of the hottest 50!</p>
-                        </article>
-
-                        <article class="playlist-card">
-                            <img src="images/RapCaviar.png"
-                                 alt="RapCaviar">
-                            <h3>RapCaviar</h3>
-                            <p>New music from today's biggest rap artists.</p>
-                        </article>
-
-                        <article class="playlist-card">
-                            <img src="images/All Out 2010s.png"
-                                 alt="All Out 2010s">
-                            <h3>All Out 2010s</h3>
-                            <p>The biggest songs of the 2010s.</p>
-                        </article>
-
-                        <article class="playlist-card">
-                            <img src="images/Rock Classics.png"
-                                 alt="Rock Classics">
-                            <h3>Rock Classics</h3>
-                            <p>Rock legends and epic songs that continue to inspire.</p>
-                        </article>
-
-                        <article class="playlist-card">
-                            <img src="images/Chill Hits.png"
-                                 alt="Chill Hits">
-                            <h3>Chill Hits</h3>
-                            <p>Kick back to the best new and recent chill hits.</p>
-                        </article>
-
-                    </div>
-                </section>
-
+        <div class="content-area">
+          <section class="music-section">
+            <div class="section-heading">
+              <h2>Focus</h2>
+              <a href="#" class="show-all">Show all</a>
             </div>
-        </main>
 
+            <div class="playlist-grid">
+              <article class="playlist-card">
+                <img src="images/Peaceful Piano.png" alt="Peaceful Piano" />
+                <h3>Peaceful Piano</h3>
+                <p>Peaceful piano to help you slow down, breathe, and...</p>
+              </article>
+
+              <article class="playlist-card">
+                <img src="images/Deep Focus.png" alt="Deep Focus" />
+                <h3>Deep Focus</h3>
+                <p>Keep calm and focus with ambient and post-rock music.</p>
+              </article>
+
+              <article class="playlist-card">
+                <img
+                  src="images/Instrumental Study.png"
+                  alt="Instrumental Study"
+                />
+                <h3>Instrumental Study</h3>
+                <p>Focus with soft study music in the background.</p>
+              </article>
+
+              <article class="playlist-card">
+                <img src="images/Focus Flow.png" alt="Focus Flow" />
+                <h3>Focus Flow</h3>
+                <p>Uptempo instrumental hip hop beats.</p>
+              </article>
+
+              <article class="playlist-card">
+                <img
+                  src="images/Beats to think to.png"
+                  alt="Beats to think to"
+                />
+                <h3>Beats to think to</h3>
+                <p>Focus with deep techno and tech house.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="music-section">
+            <div class="section-heading">
+              <h2>Spotify Playlists</h2>
+              <a href="#" class="show-all">Show all</a>
+            </div>
+
+            <div class="playlist-grid">
+              <article class="playlist-card">
+                <img src="images/Today’s Top Hits.png" alt="Today's Top Hits" />
+                <h3>Today's Top Hits</h3>
+                <p>Harry Styles is on top of the hottest 50!</p>
+              </article>
+
+              <article class="playlist-card">
+                <img src="images/RapCaviar.png" alt="RapCaviar" />
+                <h3>RapCaviar</h3>
+                <p>New music from today's biggest rap artists.</p>
+              </article>
+
+              <article class="playlist-card">
+                <img src="images/All Out 2010s.png" alt="All Out 2010s" />
+                <h3>All Out 2010s</h3>
+                <p>The biggest songs of the 2010s.</p>
+              </article>
+
+              <article class="playlist-card">
+                <img src="images/Rock Classics.png" alt="Rock Classics" />
+                <h3>Rock Classics</h3>
+                <p>Rock legends and epic songs that continue to inspire.</p>
+              </article>
+
+              <article class="playlist-card">
+                <img src="images/Chill Hits.png" alt="Chill Hits" />
+                <h3>Chill Hits</h3>
+                <p>Kick back to the best new and recent chill hits.</p>
+              </article>
+            </div>
+          </section>
+        </div>
+      </main>
     </div>
-
-</body>
+  </body>
 </html>

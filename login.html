@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="validation.js" defer></script>
+</head>
+<body>
+
+    <main class="login-container">
+
+        <!-- Spotify Logo -->
+        <div class="spotify-logo">
+            <svg viewBox="0 0 24 24" aria-label="Spotify logo" role="img">
+                <circle cx="12" cy="12" r="10.5"/>
+                <path d="M5.5 9.2C9.8 7.9 14.8 8.6 18.2 10.5"/>
+                <path d="M6.5 12.1C10 11.1 14 11.7 17 13.3"/>
+                <path d="M7.5 14.9C10.3 14.2 13.3 14.7 15.8 16"/>
+            </svg>
+        </div>
+
+        <h1>Millions of songs.<br>Free on Spotify.</h1>
+
+        <!-- Login Form -->
+        <form class="login-form" id="loginForm" novalidate>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email"
+            >
+
+            <span class="error-message" id="emailError"></span>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Password"
+            >
+
+            <span class="error-message" id="passwordError"></span>
+
+            <a href="#" class="forgot-password">
+                Forgot password?
+            </a>
+
+            <button type="submit" class="btn btn-primary">
+                Login
+            </button>
+
+            <p id="successMessage" class="success-message"></p>
+
+        </form>
+
+        <p class="switch-page">
+            <a href="signup.html">Sign Up</a>
+        </p>
+
+    </main>
+
+</body>
+</html>
