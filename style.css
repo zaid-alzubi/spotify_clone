@@ -1,0 +1,596 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.app {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0;
+    gap: 0;
+}
+
+
+/* Sidebar */
+
+.sidebar {
+    width: 304px;
+    flex-shrink: 0;
+    background-color: #000000;
+    padding: 24px 24px 32px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Spotify Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.logo img {
+    display: block;
+    width: 152px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Navigation */
+
+.main-nav,
+.library-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.library-actions {
+    margin-top: 28px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 8px 2px;
+    color: #b3b3b3;
+    font-size: 17px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.nav-link span {
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.nav-link img {
+    display: block;
+    width: 100px;
+    height: 32px;
+    max-width: 200px;
+    object-fit: contain;
+    transform: scale(1.08);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffffff;
+}
+
+/* Sidebar Footer */
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding-top: 32px;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    column-gap: 20px;
+    row-gap: 25px;
+    margin-bottom: 48px;
+}
+
+.footer-links a {
+    color: #b3b3b3;
+    font-size: 12px;
+    white-space: nowrap;
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Language Button */
+
+.lang-btn{display:inline-flex;align-items:center;gap:5px;background:none;color:var(--text);border:1px solid #777;border-radius:20px;padding:5px 10px;font-size:20px;font-weight:500;cursor:pointer}
+.lang-btn:hover{border-color:#fff}
+.lang-btn svg{width:21px;height:21px;fill:none;stroke:currentColor}
+
+/* Main content */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    background: linear-gradient(#202020, #121212 300px);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.topbar {
+    height: 64px;
+    background-color: #101010;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.signup {
+    color: #b3b3b3;
+    font-weight: bold;
+}
+
+.signup:hover {
+    color: #ffffff;
+}
+
+.login {
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 30px;
+    padding: 14px 24px;
+    font-weight: bold;
+}
+
+.login:hover {
+    transform: scale(1.04);
+}
+
+.content-area {
+    padding: 20px;
+}
+
+.music-section {
+    margin-bottom: 24px;
+}
+
+.section-heading {
+    margin-bottom: 16px;
+}
+
+.section-heading h2 {
+    font-size: 20px;
+}
+
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.playlist-card {
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.playlist-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.music-section {
+    margin-bottom: 28px;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    font-size: 24px;
+}
+
+.show-all {
+    color: #b3b3b3;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.show-all:hover {
+    text-decoration: underline;
+}
+
+/* Playlist cards */
+
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.playlist-card {
+    min-width: 0;
+    background-color: #181818;
+    border-radius: 8px;
+    padding: 12px;
+    transition: background-color 0.2s;
+    overflow: hidden;
+}
+
+.playlist-card:hover {
+    background-color: #282828;
+}
+
+.playlist-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 14px;
+}
+
+.playlist-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.playlist-card p {
+    color: #b3b3b3;
+    font-size: 14px;
+    line-height: 1.5;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Responsive design */
+
+@media (max-width: 1100px) {
+    .playlist-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .app {
+        padding: 0;
+        gap: 0;
+    }
+
+    .sidebar {
+        width: 72px;
+        padding: 20px 8px;
+        border-radius: 0;
+    }
+
+    .logo {
+        justify-content: center;
+        font-size: 0;
+    }
+
+    .logo-icon {
+        font-size: 28px;
+    }
+
+    .nav-link {
+        justify-content: center;
+        gap: 0;
+    }
+
+    .nav-link span {
+        font-size: 22px;
+    }
+
+    .nav-link {
+        font-size: 0;
+    }
+
+    .library-actions {
+        margin-top: 20px;
+    }
+
+    .sidebar-bottom {
+        display: none;
+    }
+
+    .main-content {
+        border-radius: 0;
+    }
+
+    .topbar {
+        height: 60px;
+        padding: 0 12px;
+    }
+
+    .auth-buttons {
+        gap: 12px;
+    }
+
+    .login {
+        padding: 11px 16px;
+    }
+
+    .content-area {
+        padding: 18px 12px;
+    }
+
+    .section-heading h2 {
+        font-size: 20px;
+    }
+
+    .playlist-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .playlist-card {
+        padding: 10px;
+    }
+}
+
+
+
+/* Search Page */
+
+.search-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px);
+}
+
+.search-content h1 {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* Sidebar Hover Effects */
+
+.nav-link {
+    transition: color 0.2s ease, background-color 0.2s ease;
+    border-radius: 5px;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+    background-color: #242424;
+}
+
+/* Active Sidebar Link */
+
+.nav-link.active {
+    color: #ffffff;
+}
+
+/* Footer Hover */
+
+.footer-links a {
+    transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Language Button Hover */
+
+.lang-btn {
+    transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+    border-color: #ffffff;
+    transform: scale(1.04);
+}
+
+
+
+
+
+
+/* ===== Sidebar: text labels + separate vector icons ===== */
+.sidebar {
+    width: 302px;
+    flex: 0 0 302px;
+    min-height: 100vh;
+    padding: 24px 22px 32px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .logo {
+    display: flex;
+    align-items: center;
+    margin: 0 0 30px;
+}
+
+.sidebar .logo img {
+    display: block;
+    width: 152px;
+    height: auto;
+    object-fit: contain;
+}
+
+.sidebar .main-nav,
+.sidebar .library-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar .library-actions {
+    margin-top: 28px;
+}
+
+.sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 32px;
+    padding: 4px 0;
+    color: #b3b3b3;
+    background: transparent;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    color: #fff;
+    background: transparent;
+}
+
+.sidebar .sidebar-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    fill: currentColor;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.sidebar .search-icon,
+.sidebar .library-icon {
+    fill: none;
+    stroke-width: 1.8;
+}
+
+.sidebar .create-icon .icon-cutout {
+    fill: none;
+    stroke: #000;
+    stroke-width: 2;
+}
+
+.sidebar .liked-icon {
+    fill: currentColor;
+    stroke: none;
+}
+
+.sidebar .sidebar-bottom {
+    margin-top: auto;
+    padding-top: 32px;
+}
+
+.sidebar .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 18px;
+    row-gap: 14px;
+    margin-bottom: 48px;
+}
+
+.sidebar .footer-links a {
+    color: #b3b3b3;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.sidebar .footer-links a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.sidebar .lang-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #777;
+    border-radius: 24px;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.sidebar .lang-btn svg {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+}
+
+@media (max-width: 700px) {
+    .sidebar {
+        width: 72px;
+        flex: 0 0 72px;
+        padding: 20px 8px;
+    }
+
+    .sidebar .logo {
+        justify-content: center;
+        margin-bottom: 28px;
+    }
+
+    .sidebar .logo img {
+        width: 40px;
+    }
+
+    .sidebar .nav-link {
+        justify-content: center;
+        gap: 0;
+    }
+
+    .sidebar .nav-link span,
+    .sidebar .sidebar-bottom {
+        display: none;
+    }
+
+    .sidebar .library-actions {
+        margin-top: 20px;
+    }
+}
